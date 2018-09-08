@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.karakal.dao.mapper.UserInfoMapper" >
+    <resultMap id="BaseResultMap" type="com.karakal.entity.UserInfo" >
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="phone" property="phone" jdbcType="VARCHAR" />
+        <result column="card_num" property="cardNum" jdbcType="VARCHAR" />
+        <result column="address" property="address" jdbcType="VARCHAR" />
+        <result column="job" property="job" jdbcType="VARCHAR" />
+        <result column="commpany" property="commpany" jdbcType="VARCHAR" />
+        <result column="sex" property="sex" jdbcType="INTEGER" />
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="city" property="city" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="getAll" resultMap="BaseResultMap">
+        select id,name,phone,card_num,address,job,commpany,sex,mstatus,city
+        from user_info
+    </select>
+
+    <select id="getOne" resultMap="BaseResultMap">
+        select id,name,phone,card_num,address,job,commpany,sex,mstatus,city
+        from user_info
+        where id = #{id}
+    </select>
+</mapper>
