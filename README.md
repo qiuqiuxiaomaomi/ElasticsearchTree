@@ -147,10 +147,5 @@ Elasticsearch
   基于Rocketmq消息的数据导入
 </pre>
   
-<pre>
-  Lucene中文分词原理与实现
-</pre>
 
-<pre>
-  使用Solr实现企业搜索
-</pre>
+![](https://i.imgur.com/gtNBaTg.png)
