@@ -248,4 +248,22 @@ Segment合并
 
 <pre>
 Segment详解：
+
+      Inverted Index:
+            1:一个有序的数据字典Dictionary（包括单次Term和它出现的频率）
+            2：与单次Term对应的Postings（即存在这个单次的文件）
+
+      Stored Fields：
+            当我们需要查找包含某个特定标题内容的文件时，Inverted Index就不能很好的解决这个
+      问题，所以Lucene提供了另外一种数据结构Stored Fields来解决这个问题。本质上，Stored Fields
+      是一个简单的键值对key-value。默认情况下，ES会存储整个文件的JSON source;
+
+      Document Values:
+            即使这样，我们发现以上结构仍然无法解决诸如：排序，聚合，facet，因为我们可能会要读取大量的
+      不需要的信息。所以另一种数据结构解决了此问题：Document Values。这种结构本质上就是一个列式的存储，
+      它高度优化了具有相同类型的数据的存储结构。
 </pre>
+
+###存储索引的流程
+
+![](https://i.imgur.com/XEnRNx6.png)
