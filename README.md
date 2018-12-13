@@ -267,3 +267,11 @@ Segment详解：
 ###存储索引的流程
 
 ![](https://i.imgur.com/XEnRNx6.png)
+
+<pre>
+详细分析一个文档的索引过程
+</pre>
+
+<pre>
+详细描述一个文档的查询过程
+</pre>
